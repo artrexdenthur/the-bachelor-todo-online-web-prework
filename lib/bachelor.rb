@@ -11,7 +11,7 @@ def get_contestant_name(data, occupation)
 end
 
 def count_contestants_by_hometown(data, hometown)
-  # code here
+  all_contestants(data).count { |contestant| contestant.fetch('hometown') == hometown }
 end
 
 def get_occupation(data, hometown)

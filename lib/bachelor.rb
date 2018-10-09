@@ -1,7 +1,7 @@
 def get_first_name_of_season_winner(data, season)
   # looking for { status: "Winner" }
   # data[season] is an array of hashes
-  data[season].find { |contestant| contestant.fetch(:status) == 'Winner' }
+  data[season].find { |contestant| contestant.fetch('status') == 'Winner' }
 end
 
 def get_contestant_name(data, occupation)

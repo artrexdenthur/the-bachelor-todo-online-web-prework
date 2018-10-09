@@ -6,7 +6,8 @@ def get_first_name_of_season_winner(data, season)
 end
 
 def get_contestant_name(data, occupation)
-  
+  occupation_hash = all_contestants(data).find { |contestant| contestant.fetch('occupation') == occupation }
+  occupation_hash['name']
 end
 
 def count_contestants_by_hometown(data, hometown)
@@ -22,5 +23,10 @@ def get_average_age_for_season(data, season)
 end
 
 def all_contestants(data)
-  all_contestants = {}
-  data.each |season, contestant_arr|
+  all_contestants = []
+  data.each do |season, contestant_arr|
+    all_contestants += contestant_arr
+  end
+  all_contestants
+end
+  

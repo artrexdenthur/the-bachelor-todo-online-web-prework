@@ -1,4 +1,5 @@
 def get_first_name_of_season_winner(data, season)
+  # looking for { status: "Winner" }
   
 end
 
